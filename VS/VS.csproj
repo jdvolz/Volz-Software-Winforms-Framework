@@ -1,0 +1,267 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{492F9B0C-42DF-464C-8E75-3222DABF18CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VS</RootNamespace>
+    <AssemblyName>VS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection\BaseConnection.cs" />
+    <Compile Include="Container\BaseContainer.cs" />
+    <Compile Include="GUI\BaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\BaseControl.Designer.cs">
+      <DependentUpon>BaseControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EditEntityControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\EditEntityControl.Designer.cs">
+      <DependentUpon>EditEntityControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form\BaseMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form\BaseMessageForm.Designer.cs">
+      <DependentUpon>BaseMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form\ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form\ExceptionForm.Designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form\NewEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form\NewEntityForm.Designer.cs">
+      <DependentUpon>NewEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\EntityListControl\EntityListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\EntityListControl\EntityListControl.Designer.cs">
+      <DependentUpon>EntityListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\EntityListControl\EntitySelectionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\EntityListControl\EntitySelectionControl.Designer.cs">
+      <DependentUpon>EntitySelectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\Interface\IBaseControl.cs" />
+    <Compile Include="GUI\Form\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\Layout\BaseLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\Layout\BaseLayout.Designer.cs">
+      <DependentUpon>BaseLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSButton.Designer.cs">
+      <DependentUpon>VSButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSCheckBox.Designer.cs">
+      <DependentUpon>VSCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSComboBox.Designer.cs">
+      <DependentUpon>VSComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSComboBoxSelector.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSComboBoxSelector.Designer.cs">
+      <DependentUpon>VSComboBoxSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSDateTime.Designer.cs">
+      <DependentUpon>VSDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSGroupBox.Designer.cs">
+      <DependentUpon>VSGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSHeaderLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSHeaderLabel.Designer.cs">
+      <DependentUpon>VSHeaderLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSLabel.Designer.cs">
+      <DependentUpon>VSLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSLaunchLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSLaunchLabel.Designer.cs">
+      <DependentUpon>VSLaunchLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSLinkLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSLinkLabel.Designer.cs">
+      <DependentUpon>VSLinkLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSListBox.Designer.cs">
+      <DependentUpon>VSListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSNonEmptyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSNonEmptyTextBox.Designer.cs">
+      <DependentUpon>VSNonEmptyTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSPanel.Designer.cs">
+      <DependentUpon>VSPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\InheritedControl\VSTextBox.Designer.cs">
+      <DependentUpon>VSTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ListenerRegistry.cs" />
+    <Compile Include="GUI\Shared.cs" />
+    <Compile Include="GUI\Transport\BaseContainerTransport.cs" />
+    <Compile Include="Logic\BaseLogic.cs" />
+    <Compile Include="Logic\Filter\IListLogicFilter.cs" />
+    <Compile Include="Logic\Filter\PassThroughFilter.cs" />
+    <Compile Include="Logic\Singleton\ReferenceManager.cs" />
+    <Compile Include="Logic\VersionLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\EditEntityControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditEntityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form\AboutForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form\BaseMessageForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BaseMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form\ExceptionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form\NewEntityForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InheritedControl\EntityListControl\EntityListControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EntityListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InheritedControl\EntityListControl\EntitySelectionControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EntitySelectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_align_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forbidden.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
